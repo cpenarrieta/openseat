@@ -88,6 +88,7 @@ module.exports = {
               return res.sendStatus(400);
             }
             
+            //if the driver has no more seats available on the route, we don't bother computing distance
             for(var i=0; i<driverRoutes.length; i++){
               var driverRoute = driverRoutes[i];
               if (driverRoute.confirmedPassengerRoutes.length >= driverRoute.seats){
@@ -223,6 +224,7 @@ module.exports = {
         populate: {
           path: 'confirmedDriverRoute',
           model: 'driverRoutes',
+          //we need these 2d and 3d populate calls to make driverInformation available to users
           populate: {
             path: 'driverInformation',
             model: 'users'
@@ -248,6 +250,7 @@ module.exports = {
             populate: {
               path: 'prospectivePassengerRoutes confirmedPassengerRoutes',
               model: 'passengerRoutes',
+              //we need these 2d and 3d populate calls to make passengerInformation available to users
               populate: {
                 path: 'passengerInformation',
                 model: 'users'
@@ -259,6 +262,9 @@ module.exports = {
           return res.sendStatus(400);
         }
 
+        //we already populated prospectivePassengerRoutes with passengerInformation above
+          //but we still need to populate confirmedPassengerRoutes with passengerInformation
+          //hence this 'options' variable and the final call to populate
         var options = {
               path: 'DriverRoutes.confirmedPassengerRoutes.passengerInformation',
               model: 'users'
