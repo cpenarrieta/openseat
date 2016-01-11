@@ -16,7 +16,6 @@ var DriverRoutesSchema = new mongoose.Schema({
   name: String,
   seats: Number,
   fee: Number,
-
   prospectivePassengerRoutes: [{ type: mongoose.Schema.Types.ObjectId, ref: 'passengerRoutes' }],
   confirmedPassengerRoutes: [{ type: mongoose.Schema.Types.ObjectId, ref: 'passengerRoutes' }],
   driverInformation: { type: mongoose.Schema.Types.ObjectId, ref: 'users' }
