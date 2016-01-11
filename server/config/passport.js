@@ -16,6 +16,7 @@ passport.use(new FacebookStrategy({
     clientSecret: process.env.FACEBOOK_APP_SECRET,
     callbackURL: constants.API_URL + "/api/auth/facebook/callback",
     enableProof: true,
+    //fields from facebook profile that openSeat uses
     profileFields: ['id', 'name','picture.type(large)', 'emails', 'displayName', 'about', 'gender']
   },
   function(accessToken, refreshToken, profile, done) {

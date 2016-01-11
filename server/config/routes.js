@@ -10,7 +10,8 @@ module.exports = function (app, express) {
 
   app.get('/api/users', usersController.getUsers);
   app.get('/api/users/:id', usersController.getUser);
-  app.get('/api/inserTestData', usersController.insertTestData);
+  //typo: changed insertestData to insertTestData
+  app.get('/api/insertTestData', usersController.insertTestData);
 
   app.post('/api/userInterestedInDriverRoute', routesController.userInterestedInDriverRoute);
   app.post('/api/driverConfirmsPassenger', routesController.driverConfirmsPassenger);
