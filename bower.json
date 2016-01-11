@@ -19,6 +19,7 @@
     "angular": "~1.4.8",
     "angular-route": "~1.4.8",
     "jquery": "~2.2.0",
-    "ngmap": "~1.16.6"
+    "ngmap": "~1.16.6",
+    "pickadate": "~3.5.6"
   }
 }

@@ -2,7 +2,6 @@ angular.module('routeSetupModule', [])
 	.controller('routeSetupCtrl', function(PostRoute, $scope, $rootScope) {
 		var geocoder = initMap();
 		$(document).ready(function() {
-
 			$('body').click(function() {
 				if ($('#isDriver').prop('checked')) {
 					$(".driver").show();
