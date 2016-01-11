@@ -27,12 +27,14 @@ angular.module('dashboardModule', [])
 
 	var initializePassengerRoutes = function(passengerId) {
 		Routes.getPassengerRoutesForUserId(passengerId, function(passengerRoutes) {
+      console.log('passengerRoutes', passengerRoutes);
 			$scope.passengerRoutes = setDays(passengerRoutes);
 		});
 	};
 
 	var initializeDriverRoutes = function(driverId) {
 		Routes.getDriverRoutesForUserId(driverId, function(driverRoutes) {
+      console.log('driverRoutes', driverRoutes);
 			$scope.driverRoutes = setDays(driverRoutes, true);
 		});
 	};

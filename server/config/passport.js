@@ -20,7 +20,6 @@ passport.use(new FacebookStrategy({
     profileFields: ['id', 'name','picture.type(large)', 'emails', 'displayName', 'about', 'gender']
   },
   function(accessToken, refreshToken, profile, done) {
-
     process.nextTick(function () {
       usersController
         .findByFacebookId(profile.id)
