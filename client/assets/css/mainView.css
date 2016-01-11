@@ -1,18 +1,28 @@
 * {
 	margin: 0px;
 	padding: 0px;
-
 }
+
+html { 
+  background: url(https://static.pexels.com/photos/21014/pexels-photo.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 h1 {
 	padding: 20px;
+	text-align: center;
 }
 
 .logo {
-	background: #DDD;
+	background: none;
 }
 
 .logo h1 {
 	font-family: sans-serif;
+	font-size: 400%;
 }
 
 .menuBar {
@@ -41,7 +51,7 @@ h1 {
 	text-decoration: none;
 	line-height: 35px;
 }
+
 .menuBar ul li a:hover {
 	background-color: #4F4F4F;
 }
-
