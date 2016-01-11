@@ -17,7 +17,7 @@
 					<div ng-show= "route.confirmedDriverRoute" class= 'driverInfo'>
 						<p>{{route.confirmedDriverRoute.driverInformation.name}}</p>
 						<p>{{route.confirmedDriverRoute.driverInformation.phoneNumber}}</p>
-						<img ng-src= {{route.confirmedDriverRoute.driverInformation.picture}}/>
+						<img ng-src= {{route.confirmedDriverRoute.driverInformation.picture}}  />
 					</div>
 				</div>
 			</li>
@@ -38,7 +38,7 @@
 				<div ng-repeat='confirmedRoute in route.confirmedPassengerRoutes track by $index'>
 					<div class = 'confirmedPassenger'>
 						<h6>{{confirmedRoute.passengerInformation.name}}</h6>
-						<img ng-src= {{confirmedRoute.passengerInformation.picture}}/>
+						<img ng-src= {{confirmedRoute.passengerInformation.picture}}  />
 						<h6>From: {{confirmedRoute.startLabel}}</h6>
 						<h6>To: {{confirmedRoute.endLabel}}</h6>
 						<h6>{{confirmedRoute.fromHour}}:{{confirmedRoute.fromMinutes}} to {{confirmedRoute.toHour}}:{{confirmedRoute.toMinutes}}</h6>
@@ -52,7 +52,7 @@
 					<div class = 'notConfirmed' ng-click="confirmPassenger(prospectiveRoute._id, route._id)">
 						<h6>{{prospectiveRoute.passengerInformation.name}}</h6>
 						
-						<img ng-src= {{prospectiveRoute.passengerInformation.picture}}/>
+						<img ng-src= {{prospectiveRoute.passengerInformation.picture}}  />
 						<h6>From: {{prospectiveRoute.startLabel}}</h6>
 						<h6>To: {{prospectiveRoute.endLabel}}</h6>
 						<h6>{{prospectiveRoute.fromHour}}:{{prospectiveRoute.fromMinutes}} to {{prospectiveRoute.toHour}}:{{prospectiveRoute.toMinutes}}</h6>
