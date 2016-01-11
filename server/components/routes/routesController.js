@@ -244,13 +244,13 @@ module.exports = {
     var numProspectivePassengerRoutes = 0;
     var current = 0;
 
+    //we need these 2d and 3d populate calls to make passengerInformation available to users
     User.findOne({ _id: driverId })
       .populate({
             path: 'DriverRoutes',
             populate: {
               path: 'prospectivePassengerRoutes confirmedPassengerRoutes',
               model: 'passengerRoutes',
-              //we need these 2d and 3d populate calls to make passengerInformation available to users
               populate: {
                 path: 'passengerInformation',
                 model: 'users'
