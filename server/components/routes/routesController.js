@@ -262,6 +262,9 @@ module.exports = {
           return res.sendStatus(400);
         }
 
+        //we already populated prospectivePassengerRoutes with passengerInformation above
+          //but we still need to populate confirmedPassengerRoutes with passengerInformation
+          //hence this 'options' variable and the final call to populate
         var options = {
               path: 'DriverRoutes.confirmedPassengerRoutes.passengerInformation',
               model: 'users'
