@@ -53,15 +53,15 @@
 				<span ng-show= "route.prospectivePassengerRoutes.length <= 0">No Prospective Passengers</span>
 				<div ng-repeat='prospectiveRoute in route.prospectivePassengerRoutes track by $index'>
 					<div class = 'driverInfo notConfirmed' ng-click="confirmPassenger(prospectiveRoute._id, route._id)">
-						<img ng-src= {{confirmedRoute.passengerInformation.picture}}  />
+						<img ng-src= {{prospectiveRoute.passengerInformation.picture}}  />
 						<div class = 'nameDays'>
-							<p>{{confirmedRoute.passengerInformation.name}}</p>
-							<p> Driving: {{confirmedRoute.days}}</p>
+							<p>{{prospectiveRoute.passengerInformation.name}}</p>
+							<p> Driving: {{prospectiveRoute.days}}</p>
 						</div>
 						<div class = 'startEnd'>
-							<p>{{confirmedRoute.fromHour}}:{{confirmedRoute.fromMinutes}} to {{confirmedRoute.toHour}}:{{confirmedRoute.toMinutes}}</p>
-							<p>From: {{confirmedRoute.startLabel}}</p>
-							<p>To: {{confirmedRoute.endLabel}}</p>
+							<p>{{prospectiveRoute.fromHour}}:{{prospectiveRoute.fromMinutes}} to {{prospectiveRoute.toHour}}:{{prospectiveRoute.toMinutes}}</p>
+							<p>From: {{prospectiveRoute.startLabel}}</p>
+							<p>To: {{prospectiveRoute.endLabel}}</p>
 						</div>
 					</div>
 				</div>
