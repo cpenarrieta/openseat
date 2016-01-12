@@ -25,6 +25,7 @@
 	background-color: #EEA;
 }
 .singleRoute {
+	background-color: #EEE;
 	margin-bottom: 10px;
 	padding: 10px;
 	border: 2px solid black;
@@ -58,3 +59,33 @@
 	width: auto;
 }
 
+.confirmedPassenger img {
+	height:100px;
+	width: auto;
+}
+
+.singleRoute .driverInfo {
+	height: 100px;
+}
+.singleRoute .driverInfo p {
+	font-size: 12pt;
+}
+
+.driverInfo .nameDays {
+	height: 50px;
+	width: 80%;
+}
+.driverInfo .nameDays p {
+	font-weight: bold;
+	margin-right: 50px;
+	text-align: center;
+}
+
+.driverInfo .startEnd {
+	height: 40px;
+	width: 80%;
+}
+
+.driverInfo .startEnd p {
+	margin-right: 50px;
+}
