@@ -21,12 +21,14 @@ angular.module('selectDriverModule', ['ngMap'])
       initializeDriverRoutes(passengerRouteId);
     }
 
+    NgMap.getMap().then(function (map) {
+      $scope.googleMapsUrl = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBytwzUydYLU_mL4X0hN4WvGLDfTQkWNJs';
+    });
+
     $scope.selectDriverRoute = function(driverRouteId){
       Routes.userInterestedInDriverRoute(passengerRouteId, driverRouteId);
       //TODO show something in the view that confirms the driverRoute was added
     };
 
-    NgMap.getMap().then(function (map) {
-      $scope.googleMapsUrl = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBytwzUydYLU_mL4X0hN4WvGLDfTQkWNJs';
-    });
+
   });

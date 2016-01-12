@@ -30,6 +30,11 @@
 
 
   #Technical details
+
+  Important! To start the server, you will need a facebook client ID and secret. From the command line, do this:
+  "FACEBOOK_APP_SECRET=YOUR_SECRET_HERE FACEBOOK_APP_ID=YOUR_FBOOK_ID_HERE nodemon server/server.js"
+  (without the enclosing quotes and adding in your actual client ID and secret).
+
     OpenSeat is built using the MEAN stack. The main points:
 
   Server-side:  We use an Express server and router. 
