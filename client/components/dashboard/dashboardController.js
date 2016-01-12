@@ -43,9 +43,12 @@ angular.module('dashboardModule', [])
 
 	$scope.confirmPassenger = function(passengerRouteId, driverRouteId) {
 		var currArr = this.$parent.route.prospectivePassengerRoutes;
-		if (currArr[i]._id === passengerRouteId) {
-			var addedRoute = this.$parent.route.prospectivePassengerRoutes.splice(i, 1);
-			this.$parent.route.confirmedPassengerRoutes.push(addedRoute);
+		for(var i = 0; i < currArr.length; i++){
+			if (currArr[i]._id === passengerRouteId) {
+				var addedRoute = this.$parent.route.prospectivePassengerRoutes.splice(i, 1);
+				this.$parent.route.confirmedPassengerRoutes.push(addedRoute);
+		}
+
 		}
 		Routes.driverConfirmsPassenger(driverRouteId, passengerRouteId, function() {
 			initializeDriverRoutes($rootScope.user._id);

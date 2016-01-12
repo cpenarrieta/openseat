@@ -36,26 +36,33 @@
 				<span ng-show= "route.confirmedPassengerRoutes.length > 0">Confirmed Passengers:</span>
 					
 				<div ng-repeat='confirmedRoute in route.confirmedPassengerRoutes track by $index'>
-					<div class = 'confirmedPassenger'>
-						<h6>{{confirmedRoute.name}}</h6>
+					<div class = 'driverInfo confirmedPassenger'>
 						<img ng-src= {{confirmedRoute.passengerInformation.picture}}  />
-						<h6>From: {{confirmedRoute.startLabel}}</h6>
-						<h6>To: {{confirmedRoute.endLabel}}</h6>
-						<h6>{{confirmedRoute.fromHour}}:{{confirmedRoute.fromMinutes}} to {{confirmedRoute.toHour}}:{{confirmedRoute.toMinutes}}</h6>
-						<h6>{{confirmedRoute.days}}</h6>
+						<div class = 'nameDays'>
+							<p>{{confirmedRoute.passengerInformation.name}}</p>
+							<p> Driving: {{confirmedRoute.days}}</p>
+						</div>
+						<div class = 'startEnd'>
+							<p>{{confirmedRoute.fromHour}}:{{confirmedRoute.fromMinutes}} to {{confirmedRoute.toHour}}:{{confirmedRoute.toMinutes}}</p>
+							<p>From: {{confirmedRoute.startLabel}}</p>
+							<p>To: {{confirmedRoute.endLabel}}</p>
+						</div>
 					</div>
-				<br>
-			</div>
+				</div>
 				<span ng-show= "route.prospectivePassengerRoutes.length > 0">Prospective Passengers:</span>
 				<span ng-show= "route.prospectivePassengerRoutes.length <= 0">No Prospective Passengers</span>
 				<div ng-repeat='prospectiveRoute in route.prospectivePassengerRoutes track by $index'>
-					<div class = 'notConfirmed' ng-click="confirmPassenger(prospectiveRoute._id, route._id)">
-						<h6>{{prospectiveRoute.name}}</h6>
-						<img ng-src= {{prospectiveRoute.passengerInformation.picture}}  />
-						<h6>From: {{prospectiveRoute.startLabel}}</h6>
-						<h6>To: {{prospectiveRoute.endLabel}}</h6>
-						<h6>{{prospectiveRoute.fromHour}}:{{prospectiveRoute.fromMinutes}} to {{prospectiveRoute.toHour}}:{{prospectiveRoute.toMinutes}}</h6>
-						<h6>{{prospectiveRoute.days}}</h6>
+					<div class = 'driverInfo notConfirmed' ng-click="confirmPassenger(prospectiveRoute._id, route._id)">
+						<img ng-src= {{confirmedRoute.passengerInformation.picture}}  />
+						<div class = 'nameDays'>
+							<p>{{confirmedRoute.passengerInformation.name}}</p>
+							<p> Driving: {{confirmedRoute.days}}</p>
+						</div>
+						<div class = 'startEnd'>
+							<p>{{confirmedRoute.fromHour}}:{{confirmedRoute.fromMinutes}} to {{confirmedRoute.toHour}}:{{confirmedRoute.toMinutes}}</p>
+							<p>From: {{confirmedRoute.startLabel}}</p>
+							<p>To: {{confirmedRoute.endLabel}}</p>
+						</div>
 					</div>
 				</div>
 			</div>
