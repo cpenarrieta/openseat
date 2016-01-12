@@ -7,7 +7,6 @@
 .dashboardIntro {
 	border: 1px solid black;
 	margin: 20px auto;
-	height: 50px;
 	width: 200px;
 	background: #EEE;
 	border-radius: 10px;
@@ -19,7 +18,8 @@
 	text-align: center;
 	line-height: 50px;
 	font-family: sans-serif;
-	font-size: 17pt;
+	font-size: 16pt;
+	padding: 4px;
 }
 
 .dashboardView ul {
@@ -86,16 +86,17 @@
 	height: 100px;
 }
 .singleRoute .driverInfo p {
-	font-size: 12pt;
+	font-size: 11pt;
 }
 
 .driverInfo .nameDays {
-	height: 50px;
+	height: 40px;
 	width: 650px;
 }
 .driverInfo .nameDays p {
+	line-height: 40px;
 	font-weight: bold;
-	margin-right: 50px;
+	margin-right: 10px;
 	text-align: center;
 }
 
@@ -105,5 +106,6 @@
 }
 
 .driverInfo .startEnd p {
-	margin-right: 50px;
+	line-height: 40px;
+	margin-right: 10px;
 }
