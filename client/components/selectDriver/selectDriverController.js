@@ -3,7 +3,6 @@ angular.module('selectDriverModule', ['ngMap'])
 .controller('selectDriverCtrl', function($scope, $rootScope, $routeParams, Routes, NgMap){
     $(document).ready(function() {
       $('body').on('click', '#driverInfo' ,function() {
-        console.log(this);
         $(this).removeClass('notChecked');
         $(this).addClass('checked');
       });
