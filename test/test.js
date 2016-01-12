@@ -1,5 +1,5 @@
 var assert = require('assert');
-var distance = require('../algorithm/utilty.js');
+var distance = require('../algorithm/utility.js');
 
 //example of using Mocha, just to make sure the testing suite works
 describe('Array', function() {

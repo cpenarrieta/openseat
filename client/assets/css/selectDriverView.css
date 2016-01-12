@@ -1,10 +1,28 @@
-#driverInfo {
-	border: 1px solid black;
-	position: relative;
-	padding: 20px;
+table {
+	table-layout: fixed;
+	width: 90%;
+}
+
+table td:nth-of-type(1) {
+	width: 20%;
+}
+
+table td:nth-of-type(2) {
+	width: 30%;
+}
+
+table td:nth-of-type(3) {
+	width: 40%;
+}
+
+#driverInfo div {
+/*	border: 1px solid black;*/
+/*	position: relative;*/
+/*	padding: 20px;
 	width: 50%;
-	margin: 10px auto;
-	height: 200px;
+	background-color: #EE9;
+	margin: 10px;
+	height: 200px;*/
 }
 
 #driverInfo p {
@@ -32,8 +50,18 @@
 	background-color: #AEA;
 }
 
-#driverInfo .content {
-	height: 120px;
+.map-container {
+	float: right;
+}
 
-	margin: 30px 0px 0px 320px;
+.map {
+	display: inline-block;
+	float: right;
+	height: 200px;
+	width: 500px;
+}
+
+#driverInfo div .content {
+	height: 120px;
+	margin: 30px 0px 0px 32px;
 }

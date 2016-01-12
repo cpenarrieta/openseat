@@ -1,17 +1,27 @@
 
-<div ng-repeat = 'route in driverRoutes track by $index'>
-	<div id = 'driverInfo' class = 'notChecked' ng-click="selectDriverRoute(route.driverRoute._id)">
+<div id = 'driverInfo'  class = 'notChecked' ng-repeat = 'route in driverRoutes track by $index'>
+	<table ng-click="selectDriverRoute(route.driverRoute._id)">
+		<tr>
+			<td>
 	  <img src="{{route.driver.picture}}">
-	  <div class= 'content'>
+	</td>
+	<td class='content'>
 		  <p>{{route.driver.name}}</p>
 		  <p>Seats: {{route.driverRoute.seats}}</p>
 		  <p>Fee: ${{route.driverRoute.fee}}</p>
 		  <p>{{route.driverRoute.startLabel}}</p>
 		  <p>{{route.driverRoute.endLabel}}</p>
-	    <div map-lazy-load="https://maps.google.com/maps/api/js"
+		 <a ng-click="selectDriverRoute(route.driverRoute._id)">Select Route</a>
+	</td>
+	<td>
+	    <div class="map-container" map-lazy-load="https://maps.google.com/maps/api/js"
 	    map-lazy-load-params="{{googleMapsUrl}}">
-	      <ng-map center="{{route.driverRoute.start}}" zoom="14"></ng-map>
+	      <ng-map class="map" center="{{route.driverRoute.start}}" zoom="14">
+	      <marker position="{{route.driverRoute.start}}" label="S"></marker>
+	                <marker position="{{route.driverRoute.end}}" label="E"></marker>
+	    </ng-map>
 	    </div>
-    </div>
-  </div>
+	  </td>
+	</tr>
+  </table>
 </div>
