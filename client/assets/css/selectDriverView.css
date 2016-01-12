@@ -15,14 +15,9 @@ table td:nth-of-type(3) {
 	width: 40%;
 }
 
-#driverInfo div {
-/*	border: 1px solid black;*/
-/*	position: relative;*/
-/*	padding: 20px;
-	width: 50%;
-	background-color: #EE9;
-	margin: 10px;
-	height: 200px;*/
+#driverInfo .driver {
+	margin-bottom: 5px;
+	border: 1px solid black;
 }
 
 #driverInfo p {
